@@ -11,8 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
     <link href="assets/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
     <link href="assets/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
+    <link href="./Prakerin Petrokimia Gresik_files/datatables.min.css" rel="stylesheet">
+
+    <link href="./Prakerin Petrokimia Gresik_files/css" rel="stylesheet">
+    <link rel="stylesheet" href="./Prakerin Petrokimia Gresik_files/lite-purple.css">
+    <link rel="stylesheet" href="./Prakerin Petrokimia Gresik_files/perfect-scrollbar.css">
 
     <link href="./Prakerin Petrokimia Gresik_files/datatables.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -79,15 +85,11 @@
                     <div></div>
                 </div>
 
-
-
                 <div style="margin: auto"></div>
 
                 <div class="header-part-right">
                     <!-- Full screen toggle -->
                     <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen=""></i>
-
-
 
                     <!-- User avatar dropdown -->
                     <div class="dropdown">
@@ -103,7 +105,7 @@
                                     Password</a>
                                 <a class="dropdown-item">Billing history</a>
 
-                                <a id="LoginStatus1" class="dropdown-item" href="javascript:__doPostBack(&#39;ctl00$LoginStatus1$ctl00&#39;,&#39;&#39;)">Logout</a>
+                                <a id="LoginStatus1" class="dropdown-item" href="javascript:__doPostBack('ctl00$LoginStatus1$ctl00','')">Logout</a>
 
                             </div>
                         </div>
@@ -117,13 +119,12 @@
                 <div class="sidebar-left open rtl-ps-none ps" data-perfect-scrollbar="" data-suppress-scroll-x="true">
                     <ul class="navigation-left">
                         <li class="nav-item" data-item="dashboard">
-                            <a class="nav-item-hold" href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#">
+                            <a class="nav-item-hold" href="#">
                                 <i class="nav-icon i-Bar-Chart"></i>
                                 <span class="nav-text">Beranda</span>
                             </a>
                             <div class="triangle"></div>
                         </li>
-
 
                         <li class="nav-item" data-item="menu-staff">
                             <a class="nav-item-hold" href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#">
@@ -146,11 +147,6 @@
                             </a>
                             <div class="triangle"></div>
                         </li>
-
-
-
-
-
                     </ul>
                     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
                         <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
@@ -675,7 +671,117 @@
                         </ul>
                     </div>
                     <div class="separator-breadcrumb border-top"></div>
-                    <div class="row">
+                    <div class="row mb-4">
+                        <div class="col-md-12 mb-2">
+                            <div class="card o-hidden">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Data Unit Kerja</h4>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 mb-2">
+                                            <div class="dataTables_length" id="MainContent_GridView2_length">
+                                                Show: <label>
+                                                    <select name="MainContent_GridView2_length"
+                                                        aria-controls="MainContent_GridView2"
+                                                        class="form-control form-control-sm" style="width: 100px;">
+                                                        <option value="10">10</option>
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+                                                </label> entries
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 d-flex flex-row-reverse bd-highlight">
+                                            <div id="MainContent_GridView2_filter justify-content-end" class="dataTables_filter">
+                                                Search: <label><input type="search" class="form-control form-control-sm"
+                                                        style="width: 250px;" placeholder=""
+                                                        aria-controls="MainContent_GridView2"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <div>
+                                            <table class="table table-bordered table-hover" cellspacing="0" rules="all" id="MainContent_GridView2" style="border-collapse:collapse; width: 1600px;">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" style="width: 3%;">No.</th>
+                                                        <th scope="col" style="width: 17%;">Unit Kerja</th>
+                                                        <th scope="col" style="width: 55%;">Penjelasan</th>
+                                                        <th scope="col" style="width: 15%;">Matching Jurusan</th>
+                                                        <th scope="col" style="width: 5%;">Kuota Peserta</th>
+                                                        <th scope="col" style="width: 5%;">Jumlah Peserta</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Dep Pengembangan SDM</td>
+                                                        <td>-</td>
+                                                        <td>Smith@gmail.com</td>
+                                                        <td><span class="badge badge-success">Active</span></td>
+                                                        <td><a class="text-success mr-2" href="#"><i
+                                                                    class="nav-icon i-Pen-2 font-weight-bold"></i></a><a class="text-danger mr-2" href="#"><i
+                                                                    class="nav-icon i-Close-Window font-weight-bold"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Dep Pengembangan SDM</td>
+                                                        <td>-</td>
+                                                        <td>Jhon@gmail.com</td>
+                                                        <td><span class="badge badge-info">Pending</span></td>
+                                                        <td><a class="text-success mr-2" href="#"><i
+                                                                    class="nav-icon i-Pen-2 font-weight-bold"></i></a><a class="text-danger mr-2" href="#"><i
+                                                                    class="nav-icon i-Close-Window font-weight-bold"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Dep Pengembangan SDM</td>
+                                                        <td>-</td>
+                                                        <td>Otto@gmail.com</td>
+                                                        <td><span class="badge badge-warning">Not Active</span></td>
+                                                        <td><a class="text-success mr-2" href="#"><i
+                                                                    class="nav-icon i-Pen-2 font-weight-bold"></i></a><a class="text-danger mr-2" href="#"><i
+                                                                    class="nav-icon i-Close-Window font-weight-bold"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <div id="MainContent_GridView2_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+
+                                                </div>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-sm-12 col-md-6 mt-2">
+                                            <div class="dataTables_info" id="MainContent_GridView2_info" role="status" aria-live="polite">Showing 1 to 10 of 4,736 entries
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 mt-2 d-flex flex-row-reverse bd-highlight">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="MainContent_GridView2_paginate">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button page-item previous disabled" id="MainContent_GridView2_previous"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                                                    <li class="paginate_button page-item active"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                                    <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                                                    <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+                                                    <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+                                                    <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                                                    <li class="paginate_button page-item disabled" id="MainContent_GridView2_ellipsis"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="6" tabindex="0" class="page-link">…</a></li>
+                                                    <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="7" tabindex="0" class="page-link">474</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item next" id="MainContent_GridView2_next"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="8" tabindex="0" class="page-link">Next</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
                         <div class="col-md-12">
                             <div class="card mb-4">
                                 <div class="card-body">
@@ -716,244 +822,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-4">
-                        <div class="col-md-12 mb-2">
-                            <div class="card o-hidden">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-3">Data Institusi</h4>
-                                    <div class="table-responsive">
-                                        <div>
-                                            <div id="MainContent_GridView2_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div class="dataTables_length" id="MainContent_GridView2_length"><label>Show <select
-                                                                    name="MainContent_GridView2_length"
-                                                                    aria-controls="MainContent_GridView2"
-                                                                    class="form-control form-control-sm">
-                                                                    <option value="10">10</option>
-                                                                    <option value="25">25</option>
-                                                                    <option value="50">50</option>
-                                                                    <option value="100">100</option>
-                                                                </select> entries</label></div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div id="MainContent_GridView2_filter" class="dataTables_filter"><label>Search:<input type="search"
-                                                                    class="form-control form-control-sm" placeholder=""
-                                                                    aria-controls="MainContent_GridView2"></label></div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <div class="dataTables_scroll">
-                                                            <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
-                                                                <div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 1093px; padding-right: 0px;">
-                                                                    <table class="table table-bordered table-hover dataTable no-footer" cellspacing="0" rules="all" border="1" style="border-collapse: collapse; margin-left: 0px; width: 1093px;" role="grid">
-                                                                        <thead>
-                                                                            <tr role="row">
-                                                                                <th scope="col" class="sorting" tabindex="0" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 22px;" aria-label="No.: activate to sort column ascending">
-                                                                                    No.</th>
-                                                                                <th scope="col" class="sorting" tabindex="0" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 322px;" aria-label="nama: activate to sort column ascending">
-                                                                                    nama</th>
-                                                                                <th scope="col" class="sorting_desc" tabindex="0" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 25px;" aria-label="tipe: activate to sort column ascending" aria-sort="descending">tipe</th>
-                                                                                <th scope="col" class="sorting" tabindex="0" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 292px;" aria-label="Alamat: activate to sort column ascending">
-                                                                                    Alamat</th>
-                                                                                <th scope="col" class="sorting" tabindex="0" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 97px;" aria-label="Kabupaten: activate to sort column ascending">
-                                                                                    Kabupaten</th>
-                                                                                <th scope="col" class="sorting" tabindex="0" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 76px;" aria-label="Provinsi: activate to sort column ascending">
-                                                                                    Provinsi</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
-                                                                <table class="table table-bordered table-hover dataTable no-footer" cellspacing="0" rules="all" border="1" id="MainContent_GridView2" style="border-collapse: collapse; width: 1093px;" role="grid" aria-describedby="MainContent_GridView2_info">
-                                                                    <thead>
-                                                                        <tr role="row" style="height: 0px;">
-                                                                            <th scope="col" class="sorting" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 22px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="No.: activate to sort column ascending">
-                                                                                <div class="dataTables_sizing" style="height:0;overflow:hidden;">
-                                                                                    No.</div>
-                                                                            </th>
-                                                                            <th scope="col" class="sorting" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 322px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="nama: activate to sort column ascending">
-                                                                                <div class="dataTables_sizing" style="height:0;overflow:hidden;">
-                                                                                    nama</div>
-                                                                            </th>
-                                                                            <th scope="col" class="sorting_desc" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 25px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="tipe: activate to sort column ascending"
-                                                                                aria-sort="descending">
-                                                                                <div class="dataTables_sizing" style="height:0;overflow:hidden;">
-                                                                                    tipe</div>
-                                                                            </th>
-                                                                            <th scope="col" class="sorting" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 292px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Alamat: activate to sort column ascending">
-                                                                                <div class="dataTables_sizing" style="height:0;overflow:hidden;">
-                                                                                    Alamat</div>
-                                                                            </th>
-                                                                            <th scope="col" class="sorting" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 97px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Kabupaten: activate to sort column ascending">
-                                                                                <div class="dataTables_sizing" style="height:0;overflow:hidden;">
-                                                                                    Kabupaten</div>
-                                                                            </th>
-                                                                            <th scope="col" class="sorting" aria-controls="MainContent_GridView2" rowspan="1" colspan="1" style="width: 76px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Provinsi: activate to sort column ascending">
-                                                                                <div class="dataTables_sizing" style="height:0;overflow:hidden;">
-                                                                                    Provinsi</div>
-                                                                            </th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-
-                                                                        <tr role="row" class="odd">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    1576
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SEKOLAH MENENGAH KEJURUAN SMTI</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="even">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2897
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMAK PADANG</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="odd">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2898
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>Smk Antartika 1 Sda</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="even">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2899
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMK ASSAADAH BUNGAH GRESIK</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="odd">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2900
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMK Assaadah Gresik</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="even">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2901
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMK Brawijaya Batu</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="odd">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2902
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMK Dwija Bhakti 1 Jombang</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="even">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2903
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMK ISLAMIC QON</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="odd">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2904
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMK ISLAMICON</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="even">
-                                                                            <td class="">
-                                                                                <span>
-                                                                                    2905
-                                                                                </span>
-                                                                            </td>
-                                                                            <td>SMK MIGAS CEPU</td>
-                                                                            <td class="sorting_1">SIS</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-md-5">
-                                                        <div class="dataTables_info" id="MainContent_GridView2_info" role="status" aria-live="polite">Showing 1 to 10 of 4,736 entries
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <div class="dataTables_paginate paging_simple_numbers" id="MainContent_GridView2_paginate">
-                                                            <ul class="pagination">
-                                                                <li class="paginate_button page-item previous disabled" id="MainContent_GridView2_previous"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                                                                <li class="paginate_button page-item active"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                                                                <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                                                                <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                                                                <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                                                                <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-                                                                <li class="paginate_button page-item disabled" id="MainContent_GridView2_ellipsis"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="6" tabindex="0" class="page-link">…</a></li>
-                                                                <li class="paginate_button page-item "><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="7" tabindex="0" class="page-link">474</a></li>
-                                                                <li class="paginate_button page-item next" id="MainContent_GridView2_next"><a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#" aria-controls="MainContent_GridView2" data-dt-idx="8" tabindex="0" class="page-link">Next</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
 
                     <!-- content goes here -->
                 </div>
@@ -1134,11 +1002,6 @@
             $('#MainContent_txttgllahir').pickadate();
         });
     </script>
-
-
-
-
-
 </body>
 
 </html>

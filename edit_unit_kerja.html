@@ -11,7 +11,33 @@
     <link href="assets/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="../../dist-assets/css/plugins/datatables.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+    <style>
+        div.text-container {
+            margin: 0 auto;
+            width: 75%;
+        }
+        
+        .hideContent {
+            overflow: hidden;
+            line-height: 1em;
+            height: 2em;
+        }
+        
+        .showContent {
+            line-height: 1em;
+            height: auto;
+        }
+        
+        .showContent {
+            height: auto;
+        }
+        
+        .show-more {
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="text-left">
@@ -26,9 +52,6 @@
                 <div></div>
                 <div></div>
             </div>
-
-
-
             <div style="margin: auto"></div>
 
             <div class="header-part-right">
@@ -45,7 +68,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                             <div class="dropdown-header">
                                 <i class="i-Lock-User mr-1"></i>
-                                <span id="LoginName1">FajarMaulana</span>
+                                <span id="LoginName1">Admin</span>
                             </div>
                             <a class="dropdown-item" href="http://prakerin.petrokimia-gresik.com/App/Profile.aspx">Profile / Ganti
                                 Password</a>
@@ -70,14 +93,27 @@
                         <div class="triangle"></div>
                     </li>
 
-                    <li class="nav-item" data-item="menu-pemohon">
-                        <a class="nav-item-hold" href="#">
+                    <li class="nav-item" data-item="menu-staff">
+                        <a class="nav-item-hold" href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#">
                             <i class="nav-icon i-Folder-Archive"></i>
-                            <span class="nav-text">Pengajuan Proposal</span>
+                            <span class="nav-text">Data Proposal</span>
                         </a>
                         <div class="triangle"></div>
                     </li>
-
+                    <li class="nav-item active" data-item="menu-admin">
+                        <a class="nav-item-hold" href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#">
+                            <i class="nav-icon i-Security-Settings"></i>
+                            <span class="nav-text">Menu Admin</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" data-item="menu-aktivitas-admin">
+                        <a class="nav-item-hold" href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi#">
+                            <i class="nav-icon i-Security-Settings"></i>
+                            <span class="nav-text">Aktivitas Prakerin</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
                 </ul>
                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
                     <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
@@ -183,8 +219,6 @@
                         </a>
                     </li>
                 </ul>
-
-
                 <ul class="childNav" data-parent="menu-pemohon" style="display: none;">
                     <li class="nav-item">
                         <a href="http://prakerin.petrokimia-gresik.com/Students/Kelompok.aspx">
@@ -214,6 +248,32 @@
                         <a href="http://prakerin.petrokimia-gresik.com/Students/Reschedule.aspx">
                             <i class="nav-icon i-Letter-Open"></i>
                             <span class="item-name">Reschedule</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-pemohon-active" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Perpanjangan.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Perpanjangan Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/UploadLaporan.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Upload Laporan (PDF)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/SK.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Cetak SK / Sertifikat</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/SK.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Database Laporan Prakerin</span>
                         </a>
                     </li>
                 </ul>
@@ -292,7 +352,7 @@
                     </li>
 
                 </ul>
-                <ul class="childNav" data-parent="menu-admin" style="display: none;">
+                <ul class="childNav" data-parent="menu-admin" style="display: block;">
                     <li class="nav-item">
                         <a href="http://prakerin.petrokimia-gresik.com/Admin/ManageNews">
                             <i class="nav-icon i-Data-Center"></i>
@@ -551,96 +611,52 @@
             <div class="sidebar-overlay"></div>
         </div>
         <!-- =============== Left side End ================-->
+        <!-- ============ Body content start ============= -->
         <div class="main-content-wrap sidenav-open d-flex flex-column">
-            <!-- ============ Body content start ============= -->
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Kelompok</h1>
+                    <h1>Edit Data Unit Kerja</h1>
                     <ul>
-                        <li>EPrakerin</li>
+                        <li>Unit Kerja</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
-                <div class="row">
+
+                <div class="row mb-4">
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="card-title mb-3">Lengkapi Data Kelompok Anda</div>
+                                <div class="card-title mb-3">Dep Pengembangan SDM</div>
+                                <span id="MainContent_LabelAddStatus"></span><br>
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">E-mail </label>
-                                        <span id="MainContent_lblemail" class="form-control form-control-rounded">a@gmail.com</span>
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">Tipe Pemohon </label>
-                                        <span id="MainContent_lbltipepemohon" class="form-control form-control-rounded">Mahasiswa</span>
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">Jenis Pengajuan</label>
-                                        <span id="MainContent_lbltujuan" class="form-control form-control-rounded">PMMB</span>
+                                        <label for="firstName2">Tipe</label>
+                                        <select name="ctl00$MainContent$ddltipe" id="MainContent_ddltipe" class="form-control form-control-rounded" required="required">
+                                            <option value="">[Silahkan pilih]</option>
+                                            <option value="MHS">Pendidikan Tinggi</option>
+                                            <option value="SIS">Sekolah Menengah Kejuruan</option>
 
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="MainContent_ddlinstitusi" id="MainContent_s_institusi">Universitas</label>
-                                        <span id="MainContent_lblinstitusi" class="form-control form-control-rounded">Institut Teknologi Sepuluh
-                                            Nopember</span>
-
-
-                                    </div>
-                                    <div id="MainContent_divfakultas" class="col-md-6 form-group mb-3">
-                                        <label for="example-text-input">Fakultas </label>
-                                        <span id="MainContent_lblfakultas" class="form-control form-control-rounded">Fakultas Teknologi Elektro dan
-                                            Informatika</span>
-
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="example-text-input">Jurusan </label>
-                                        <select class="form-control form-control-rounded" id="jurusan" name="state">
-                                            <option value="AL">Teknik Informatika</option>
-                                            <option value="AL">Sistem Informasi</option>
-                                            <option value="AL">Teknik Industri</option>
-                                            <option value="AL">Teknik Kimia</option>
-                                            <option value="AL">Manajemen Bisnis</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label for="MainContent_txtkota" id="MainContent_s_alamat">Alamat
-                                            Universitas</label><span id="MainContent_lblkota" class="form-control form-control-rounded">Jl. Teknik Kimia, Keputih, Kec.
-                                            Sukolilo, Kota SBY, Jawa Timur 60111</span>
-
+                                        <label for="firstName2">Nama </label>
+                                        <input name="ctl00$MainContent$txtnama" id="MainContent_txtnama" class="form-control form-control-rounded" type="text">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label for="MainContent_txtemailinstitusi" id="MainContent_s_emailinstitusi">Email Jurusan</label>
-                                        <span id="MainContent_lblemailinstitusi" class="form-control form-control-rounded">tinformatika@its.ac.id</span>
-
+                                        <label for="firstName2">Alamat </label>
+                                        <input name="ctl00$MainContent$txtalamat" id="MainContent_txtalamat" class="form-control form-control-rounded" type="text">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label for="MainContent_txtpembimbing" id="MainContent_s_dosenpembimbing">Nama
-                                            Dosen Pembimbing</label>
-                                        <span id="MainContent_lblpembimbing" class="form-control form-control-rounded">Dr. a, S.Kom., M.Sc.</span>
-
+                                        <label for="firstName2">Kabupaten </label>
+                                        <input name="ctl00$MainContent$txtkabupaten" id="MainContent_txtkabupaten" class="form-control form-control-rounded" type="text">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label for="MainContent_txttelpjurusan" id="MainContent_s_telpjurusan">No Telp
-                                            Jurusan</label>
-                                        <span id="MainContent_lbltelpjurusan" class="form-control form-control-rounded">+251</span>
-
+                                        <label for="firstName2">Provinsi </label>
+                                        <input name="ctl00$MainContent$txtprovinsi" id="MainContent_txtprovinsi" class="form-control form-control-rounded" type="text">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label for="MainContent_txthppembimbing" id="MainContent_s_nohppembimbing">No
-                                            Telp Pembimbing</label>
-                                        <span id="MainContent_lblhppembimbing" class="form-control form-control-rounded">+655</span>
-
-
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="example-text-input">Status Kelengkapan </label><br>
-                                        <span id="MainContent_lblkelengkapan" class="form-control-rounded badge badge-pill badge-success p-2 m-1">Lengkap</span>
-                                        <a id="MainContent_hlMember" class="btn btn-primary btn-sm" href="Members.aspx">Lanjutkan ke form anggota</a>
-                                    </div>
-                                    <div class="col-md-12 form-group mb-3">
-                                        <input type="submit" name="ctl00$MainContent$BtnEdit" value="Edit" id="MainContent_BtnEdit" class="btn btn-primary ">
-
+                                        <label for="firstName2"></label><br>
+                                        <input type="submit" name="ctl00$MainContent$BtnSave" style="padding: 8px 32px 8px 32px;" value="Simpan" id="MainContent_BtnSave" class="btn btn-success">
                                     </div>
                                 </div>
                             </div>
@@ -650,7 +666,10 @@
 
                 <!-- content goes here -->
             </div>
+            <!-- end of main content -->
+
         </div>
+        <!-- ============ Body content End ============= -->
     </div>
     <script src="assets/dist-assets/js/plugins/jquery-3.3.1.min.js"></script>
     <script src="assets/dist-assets/js/plugins/bootstrap.bundle.min.js"></script>
@@ -658,13 +677,23 @@
     <script src="assets/dist-assets/js/scripts/script.min.js"></script>
     <script src="assets/dist-assets/js/scripts/sidebar.large.script.min.js"></script>
     <script src="Prakerin%20Petrokimia%20Gresik_files/datatables.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#jurusan').select2();
+        $(".show-more a").on("click", function() {
+            var $this = $(this);
+            var $content = $this.parent().prev("div.content");
+            var linkText = $this.text().toUpperCase();
+
+            if (linkText === "SHOW MORE") {
+                linkText = "Show less";
+                $content.switchClass("hideContent", "showContent", 100);
+            } else {
+                linkText = "Show more";
+                $content.switchClass("showContent", "hideContent", 100);
+            };
+
+            $this.text(linkText);
         });
     </script>
-
 </body>
 
 </html>
