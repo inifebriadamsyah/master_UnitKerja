@@ -617,7 +617,7 @@
                 <div class="breadcrumb">
                     <h1>Edit Data Unit Kerja</h1>
                     <ul>
-                        <li>Unit Kerja</li>
+                        <li>Dep Pengembangan SDM</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -626,48 +626,82 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="card-title mb-3">Dep Pengembangan SDM</div>
+                                <div class="card-title mb-3">Edit Data <strong>Dep Pengembangan SDM</strong></div>
                                 <span id="MainContent_LabelAddStatus"></span><br>
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">Tipe</label>
-                                        <select name="ctl00$MainContent$ddltipe" id="MainContent_ddltipe" class="form-control form-control-rounded" required="required">
-                                            <option value="">[Silahkan pilih]</option>
-                                            <option value="MHS">Pendidikan Tinggi</option>
-                                            <option value="SIS">Sekolah Menengah Kejuruan</option>
-
+                                        <label for="firstName2">Nama Unit Kerja / Departemen Penempatan</label>
+                                        <input name="ctl00$MainContent$txtnama" id="MainContent_txtnama" value="Dep Pengembangan SDM" class="form-control form-control-rounded" type="text" required>
+                                    </div>
+                                    <div class="col-md-3 form-group mb-3">
+                                        <label for="firstName2">Kuota Peserta</label>
+                                        <input name="ctl00$MainContent$txtnama" id="MainContent_txtnama" value="28" class="form-control form-control-rounded" type="text" required>
+                                    </div>
+                                    <div class="col-md-3 form-group mb-3">
+                                        <label for="firstName2">Jumlah Peserta</label>
+                                        <input name="ctl00$MainContent$txtnama" id="MainContent_txtnama" value="20" class="form-control form-control-rounded" type="text" required>
+                                    </div>
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for=" firstName2 ">Deskripsi Unit Kerja</label>
+                                        <textarea name="ctl00$MainContent$txtnama " id="MainContent_txtdeskripsi" class="form-control" id="message-text" type="text" style="height: 150px;" required>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </textarea>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Jurusan </label>
+                                        <select class="custom-select">
+                                            <option value="AL">Teknik Informatika</option>
+                                            <option value="AL">Sistem Informasi</option>
+                                            <option value="AL">Teknik Industri</option>
+                                            <option value="AL">Teknik Kimia</option>
+                                            <option value="AL">Manajemen Bisnis</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">Nama </label>
-                                        <input name="ctl00$MainContent$txtnama" id="MainContent_txtnama" class="form-control form-control-rounded" type="text">
+                                    <div class="row col-md-12">
+                                        <div class="col-md-3 mt-3 mb-3">
+                                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                <strong>Teknik Informatika.</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mt-3 mb-3">
+                                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                <strong>Teknik Industri.</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mt-3 mb-3">
+                                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                <strong>Manajemen Bisnis.</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mt-3 mb-3">
+                                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                <strong>Sistem Informasi.</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">Alamat </label>
-                                        <input name="ctl00$MainContent$txtalamat" id="MainContent_txtalamat" class="form-control form-control-rounded" type="text">
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">Kabupaten </label>
-                                        <input name="ctl00$MainContent$txtkabupaten" id="MainContent_txtkabupaten" class="form-control form-control-rounded" type="text">
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2">Provinsi </label>
-                                        <input name="ctl00$MainContent$txtprovinsi" id="MainContent_txtprovinsi" class="form-control form-control-rounded" type="text">
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label for="firstName2"></label><br>
-                                        <input type="submit" name="ctl00$MainContent$BtnSave" style="padding: 8px 32px 8px 32px;" value="Simpan" id="MainContent_BtnSave" class="btn btn-success">
+                                    <p id="deskripsi"></p>
+                                    <div class=" col-md-12 form-group mb-3 d-flex flex-row-reverse bd-highlight">
+                                        <label for=" firstName2 "></label><br>
+                                        <input type=" submit " name=" ctl00$MainContent$BtnSave " style=" padding: 8px 32px 8px 32px; " value=" Simpan " id=" MainContent_BtnSave " class=" btn btn-success">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- content goes here -->
             </div>
             <!-- end of main content -->
-
         </div>
         <!-- ============ Body content End ============= -->
     </div>
@@ -693,6 +727,17 @@
 
             $this.text(linkText);
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#jurusan').select2();
+        });
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("MainContent_txtdeskripsi").value;
+            document.getElementById("deskripsi").innerHTML = x;
+        }
     </script>
 </body>
 
